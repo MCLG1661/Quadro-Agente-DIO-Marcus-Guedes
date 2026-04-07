@@ -1,5 +1,9 @@
 # 🤖 Agente de Automação Trello
 
+![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 Um agente Python para automatizar fluxos de trabalho no Trello, permitindo criar, mover e gerenciar cards automaticamente.
 
 ---
@@ -145,7 +149,6 @@ bash
 
 ## 🛠️ Estrutura do Projeto
 ```
-text
 agente-trello/
 ├── .env                 # Credenciais da API (não compartilhar)
 ├── .gitignore          # Arquivos ignorados pelo Git
@@ -153,3 +156,26 @@ agente-trello/
 ├── automacao_total.py  # Versão sem interação (opcional)
 └── README.md           # Documentação
 ```
+
+---
+
+## 🔒 Segurança
+
+- As credenciais são armazenadas no arquivo .env (não versionado)
+- Nunca compartilhe sua API Key ou Token
+- Revogue tokens não utilizados nas configurações do Trello
+- Use .gitignore para evitar commits acidentais
+
+---
+
+## 🤝 Contribuindo
+
+- Faça um Fork do projeto
+- Crie sua branch (git checkout -b feature/nova-funcionalidade)
+- Commit suas mudanças (git commit -m 'Adiciona nova funcionalidade')
+- Push para a branch (git push origin feature/nova-funcionalidade)
+- Abra um Pull Request
+
+---
+
+##
