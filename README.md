@@ -140,3 +140,14 @@ bash
 # Executar todo dia às 9h
 0 9 * * * /usr/bin/python3 /home/usuario/agente_automatico.py             
 ```
+
+---
+
+## 🛠️ Estrutura do Projeto
+text
+agente-trello/
+├── .env                 # Credenciais da API (não compartilhar)
+├── .gitignore          # Arquivos ignorados pelo Git
+├── agente.py           # Código principal do agente
+├── automacao_total.py  # Versão sem interação (opcional)
+└── README.md           # Documentação
