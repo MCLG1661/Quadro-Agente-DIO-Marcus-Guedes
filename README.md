@@ -2,7 +2,7 @@
 
 Um agente Python para automatizar fluxos de trabalho no Trello, permitindo criar, mover e gerenciar cards automaticamente.
 
-![Python 3.7](https://img.shields.io/badge/python-3.7+-blue.svg)
+![Python 3.14](https://img.shields.io/badge/python-3.7+-blue.svg)
 
 ---
 
@@ -176,4 +176,8 @@ agente-trello/
 
 ---
 
-##
+## 👤 Autor
+Marcus Guedes
+
+LinkedIn: https://www.linkedin.com/in/marcusguedes
+GitHub : https://github.com/MCLG1661
