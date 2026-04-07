@@ -75,9 +75,9 @@ Menu Principal :
 
 ---
 
-## Exemplo de saída da automação
+## Exemplo de Saída da Automação
 
-INICIANDO AUTOMAÇÃO DIÁRIA
+## Iniciando Automação Diária
 ==================================================
 
 Quadros disponíveis :
@@ -144,6 +144,7 @@ bash
 ---
 
 ## 🛠️ Estrutura do Projeto
+```
 text
 agente-trello/
 ├── .env                 # Credenciais da API (não compartilhar)
@@ -151,3 +152,4 @@ agente-trello/
 ├── agente.py           # Código principal do agente
 ├── automacao_total.py  # Versão sem interação (opcional)
 └── README.md           # Documentação
+```
