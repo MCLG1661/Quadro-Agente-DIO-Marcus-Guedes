@@ -61,7 +61,7 @@ python agente.py
 
 ---
 
-## 📋 Como usar
+## 📋 Como Usar
 
 Menu Principal :
 
@@ -72,5 +72,70 @@ Menu Principal :
 3. 🔄 Mover card entre listas
 4. 💬 Adicionar comentário a um card
 5. 📊 Listar cards de uma lista
-6. 🚀 Executar automação diária
-0. 👋 Sair
+
+---
+
+## Exemplo de saída da automação
+
+INICIANDO AUTOMAÇÃO DIÁRIA
+==================================================
+
+Quadros disponíveis :
+  1. Projeto Pessoal
+  2. Trabalho
+  3. Estudos
+
+📁 Nome do quadro para automação: Projeto Pessoal
+
+✅ Quadro selecionado: Projeto Pessoal
+
+Listas disponíveis :
+  1. To Do
+  2. Doing
+  3. Done
+
+📝 Nome da lista para criar cards: To Do
+✅ Nome da lista para mover cards concluídos: Done
+
+📝 Criando card: Tarefa do dia - 2024-01-15
+✅ Card criado com sucesso!
+
+🔄 Verificando cards antigos...
+✅ Card 'Reunião antiga' movido para 'Done'
+
+✅ Automação concluída!
+   - Card criado: Tarefa do dia - 2024-01-15
+   - Cards movidos: 1
+
+---
+
+## 🎯 Exemplos de Automação Personalizada
+
+- Criar card com checklist automático
+
+# Adicione ao seu código
+card = lista.add_card(name="Revisão Diária")
+card.add_checklist("Tarefas do dia", [
+    "Verificar emails",
+    "Atualizar status do projeto",
+    "Fazer commit do código"
+])
+
+- Mover cards com label específica
+
+for card in lista.list_cards():
+    for label in card.labels:
+        if label.name == "urgente":
+            card.change_list(lista_destino.id)
+
+- Agendar execução automática
+
+Windows (Agendador de Tarefas):
+
+batch
+C:\Python39\python.exe C:\projetos\agente_automatico.py
+Linux/Mac (Cron):
+
+bash
+# Executar todo dia às 9h
+0 9 * * * /usr/bin/python3 /home/usuario/agente_automatico.py             
