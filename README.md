@@ -177,7 +177,8 @@ agente-trello/
 ---
 
 ## 👤 Autor
+
 Marcus Guedes
 
-LinkedIn: https://www.linkedin.com/in/marcusguedes
-GitHub : https://github.com/MCLG1661
+- LinkedIn : https://www.linkedin.com/in/marcusguedes
+- GitHub : https://github.com/MCLG1661
