@@ -148,7 +148,7 @@ bash
 ## 🛠️ Estrutura do Projeto
 ```
 agente-trello/
-├── .env                 # Credenciais da API (não compartilhar)
+├── .env                # Credenciais da API (não compartilhar)
 ├── .gitignore          # Arquivos ignorados pelo Git
 ├── agente.py           # Código principal do agente
 ├── automacao_total.py  # Versão sem interação (opcional)
