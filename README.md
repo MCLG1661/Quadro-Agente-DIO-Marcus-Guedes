@@ -1,6 +1,7 @@
 # 🤖 Agente de Automação Trello
 
 Um agente Python para automatizar fluxos de trabalho no Trello, permitindo criar, mover e gerenciar cards automaticamente.
+
 ![Python 3.7](https://img.shields.io/badge/python-3.7+-blue.svg)
 
 ---
