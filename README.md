@@ -65,7 +65,7 @@ python agente.py
 
 Menu Principal :
 
-## 🤖 AGENTE TRELLO - AUTOMAÇÃO
+## AGENTE TRELLO - AUTOMAÇÃO
 ========================================
 1. 📋 Listar meus quadros
 2. ➕ Criar novo card
