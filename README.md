@@ -113,7 +113,6 @@ Listas disponíveis :
 
 - Criar card com checklist automático
 
-# Adicione ao seu código
 card = lista.add_card(name="Revisão Diária")
 card.add_checklist("Tarefas do dia", [
     "Verificar emails",
@@ -131,11 +130,13 @@ for card in lista.list_cards():
 - Agendar execução automática
 
 Windows (Agendador de Tarefas):
-
+```
 batch
 C:\Python39\python.exe C:\projetos\agente_automatico.py
+```
 Linux/Mac (Cron):
-
+```
 bash
 # Executar todo dia às 9h
 0 9 * * * /usr/bin/python3 /home/usuario/agente_automatico.py             
+```
