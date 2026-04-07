@@ -36,5 +36,41 @@ cd agente-trello
 2. **Instale as dependências**
 ```bash
 pip install py-trello python-dotenv
+```
 
 ---
+
+## Configure as Credenciais
+
+- Acesse: https://trello.com/power-ups/admin
+- Clique em "Create New Power-Up"
+- Copie sua API Key na aba "API Key"
+- Clique em "Token" para gerar seu token
+- Crie um arquivo .env na raiz do projeto:
+```env
+TRELLO_API_KEY=sua_api_key_aqui
+TRELLO_TOKEN=seu_token_aqui
+```
+
+---
+
+## Execute o Agente
+```bash
+python agente.py
+```
+
+---
+
+## 📋 Como usar
+
+Menu Principal :
+
+🤖 AGENTE TRELLO - AUTOMAÇÃO
+========================================
+1. 📋 Listar meus quadros
+2. ➕ Criar novo card
+3. 🔄 Mover card entre listas
+4. 💬 Adicionar comentário a um card
+5. 📊 Listar cards de uma lista
+6. 🚀 Executar automação diária
+0. 👋 Sair
