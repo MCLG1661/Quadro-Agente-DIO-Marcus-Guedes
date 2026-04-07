@@ -31,9 +31,10 @@ Um agente Python para automatizar fluxos de trabalho no Trello, permitindo criar
 ```bash
 git clone https://github.com/seu-usuario/agente-trello.git
 cd agente-trello
-
----
+```
 
 2. **Instale as dependências**
 ```bash
 pip install py-trello python-dotenv
+
+---
