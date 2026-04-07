@@ -1,0 +1,13 @@
+# Arquivos com credenciais
+.env
+.env.local
+.env.*.local
+
+# Arquivos Python temporários
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+*.code-workspace
