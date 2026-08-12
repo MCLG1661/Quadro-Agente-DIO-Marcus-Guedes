@@ -4,7 +4,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.7+-3776AB?logo=python&logoColor=white)
 ![Trello](https://img.shields.io/badge/Trello-API-0052CC?logo=trello&logoColor=white)
-![Automation](https://img.shields.io/badge/Workflow-Automation-2E8B57)
+![Workflow Automation](https://img.shields.io/badge/Workflow-Automation-2E8B57)
 ![API](https://img.shields.io/badge/Integration-REST%20API-orange)
 ![dotenv](https://img.shields.io/badge/Security-.env-yellow)
 ![DIO](https://img.shields.io/badge/DIO-Project-5A0FC8)
