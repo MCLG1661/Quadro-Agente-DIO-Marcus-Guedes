@@ -38,6 +38,15 @@ A solução permite executar operações como :
 
 ---
 
+## 🏗️ Arquitetura Visual
+
+<img width="800" height="400" alt="ChatGPT Image 12 de ago  de 2026, 19_55_15" src="https://github.com/user-attachments/assets/0b15ce53-1ebb-4168-bcd4-bde2541164de" />
+
+A arquitetura do projeto separa a interação com o usuário, as operações de automação
+e a comunicação com a API do Trello.
+
+---
+
 ## ✨ Funcionalidades
 
 📋 Listagem de Quadros
