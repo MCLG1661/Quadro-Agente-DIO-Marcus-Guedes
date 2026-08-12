@@ -1,184 +1,448 @@
-# 🤖 Agente de Automação Trello
+# ⚙️ Trello Workflow Automation
 
-Um agente Python para automatizar fluxos de trabalho no Trello, permitindo criar, mover e gerenciar cards automaticamente.
+*Automação de workflows e gerenciamento de tarefas com Python e Trello API*
 
-![Python 3.7](https://img.shields.io/badge/python-3.7+-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.7+-3776AB?logo=python&logoColor=white)
+![Trello](https://img.shields.io/badge/Trello-API-0052CC?logo=trello&logoColor=white)
+![Automation](https://img.shields.io/badge/Workflow-Automation-2E8B57)
+![API](https://img.shields.io/badge/Integration-REST%20API-orange)
+![dotenv](https://img.shields.io/badge/Security-.env-yellow)
+![DIO](https://img.shields.io/badge/DIO-Project-5A0FC8)
+![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)
+
+O **Trello Automation Agent** é uma aplicação Python desenvolvida para automatizar
+operações e fluxos de trabalho no Trello.
+
+A solução integra-se ao Trello para permitir a criação, movimentação, consulta
+e atualização de cards, além da execução de rotinas automatizadas para gerenciamento
+de tarefas.
+
+O projeto demonstra a aplicação prática de **Python, integração com APIs,
+automação de processos e gerenciamento seguro de credenciais**.
+
+---
+
+## 🎯 Objetivo
+
+Automatizar tarefas repetitivas de gerenciamento de projetos no Trello por meio
+de uma aplicação Python.
+
+A solução permite executar operações como :
+
+- Consultar quadros
+- Criar cards
+- Movimentar cards entre listas
+- Adicionar comentários
+- Consultar cards
+- Automatizar rotinas recorrentes
 
 ---
 
 ## ✨ Funcionalidades
 
-- 📋 **Listar quadros** - Visualize todos os seus quadros do Trello
-- ➕ **Criar cards** - Adicione novos cards com título e descrição
-- 🔄 **Mover cards** - Transfira cards entre listas facilmente
-- 💬 **Adicionar comentários** - Insira comentários em cards existentes
-- 📊 **Listar cards** - Veja todos os cards de uma lista específica
-- 🚀 **Automação diária** - Crie cards automaticamente e mova cards antigos
+📋 Listagem de Quadros
+
+Consulta os quadros disponíveis na conta integrada.
+
+➕ Criação de Cards
+
+Permite criar novos cards informando título e descrição.
+
+🔄 Movimentação de Cards
+
+Transfere cards entre diferentes listas de um quadro.
+
+💬 Comentários
+
+Permite adicionar comentários a cards existentes.
+
+📊 Consulta de Cards
+
+Lista os cards existentes em uma lista específica.
+
+🚀 Automação de Rotinas
+
+Permite executar fluxos automatizados, como criação periódica de tarefas e
+movimentação de cards de acordo com regras previamente definidas.
 
 ---
 
-## 🚀 Começando
+## 🏗️ Arquitetura
 
-### Pré-requisitos
-
-- Python 3.7 ou superior
-- Conta no [Trello](https://trello.com/)
-- VS Code ou qualquer editor de código
-
----
-
-### Instalação
-
-1. **Clone o repositório**
-```bash
-git clone https://github.com/seu-usuario/agente-trello.git
-cd agente-trello
+```text
+┌─────────────────────────┐
+│        Usuário          │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│     Aplicação Python    │
+│                         │
+│ • Listar quadros        │
+│ • Criar cards           │
+│ • Mover cards           │
+│ • Adicionar comentários │
+│ • Consultar cards       │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│       py-trello         │
+│                         │
+│ Camada de integração    │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│       Trello API        │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│         Trello          │
+│                         │
+│ Boards → Lists → Cards  │
+└─────────────────────────┘
 ```
 
-2. **Instale as dependências**
+As credenciais utilizadas pela aplicação são carregadas por meio de variáveis
+de ambiente, evitando sua inclusão diretamente no código-fonte.
+
+---
+
+## 🔄 Fluxo de Automação
+
+Um fluxo típico pode ser representado por :
+
+```text
+Início
+  ↓
+Autenticação
+  ↓
+Selecionar Quadro
+  ↓
+Selecionar Lista
+  ↓
+Criar / Consultar Cards
+  ↓
+Aplicar Regras
+  ↓
+Mover / Atualizar Cards
+  ↓
+Finalizar Automação
+```
+
+---
+
+## 🛠️ Tecnologias
+
+**Python** - Desenvolvimento da automação
+
+**Trello API** - Integração com o Trello 
+
+**py-trello** - Comunicação com os recursos do Trello 
+
+**python-dotenv** - Gerenciamento de variáveis de ambiente
+
+**Git** - Versionamento 
+
+**GitHub** - Repositório e documentação
+
+---
+
+## 🚀 Instalação
+
+Pré-requisitos
+
+- Python 3.7 ou superior
+- Conta no Trello
+- Credenciais para acesso à API
+- Git
+
+1. Clone o repositório
+
+```bash
+git clone https://github.com/MCLG1661/Quadro-Agente-DIO-Marcus-Guedes.git
+```
+
+Entre no diretório:
+
+```bash
+cd Quadro-Agente-DIO-Marcus-Guedes
+```
+
+2. Instale as dependências
+
 ```bash
 pip install py-trello python-dotenv
 ```
 
 ---
 
-## Configure as Credenciais
+## 🔐 Configuração das Credenciais
 
-- Acesse: https://trello.com/power-ups/admin
-- Clique em "Create New Power-Up"
-- Copie sua API Key na aba "API Key"
-- Clique em "Token" para gerar seu token
-- Crie um arquivo .env na raiz do projeto:
+As credenciais **não devem ser inseridas diretamente no código**.
+
+Crie um arquivo:
+
+```text
+.env
+```
+
+na raiz do projeto.
+
+Adicione :
+
 ```env
 TRELLO_API_KEY=sua_api_key_aqui
 TRELLO_TOKEN=seu_token_aqui
 ```
 
+Certifique-se de que `.env` esteja incluído no `.gitignore`.
+
+> ⚠️ Nunca publique sua API Key ou Token no GitHub.
+
 ---
 
-## Execute o Agente
+## ▶️ Executando
+
+Execute :
+
 ```bash
 python agente.py
 ```
 
+A aplicação apresentará as operações disponíveis para gerenciamento do Trello.
+
 ---
 
-## 📋 Como Usar
+## 📋 Menu Principal
 
-Menu Principal :
+```text
+AGENTE TRELLO — AUTOMAÇÃO
 
-## Agente Trello - Automação
-========================================
 1. 📋 Listar meus quadros
 2. ➕ Criar novo card
 3. 🔄 Mover card entre listas
-4. 💬 Adicionar comentário a um card
+4. 💬 Adicionar comentário
 5. 📊 Listar cards de uma lista
+```
 
 ---
 
-## Exemplo de Saída da Automação
+## 🚀 Exemplo de Automação
 
-## Iniciando Automação Diária
-==================================================
+Um fluxo automatizado pode:
 
-Quadros disponíveis :
-  1. Projeto Pessoal
-  2. Trabalho
-  3. Estudos
+1. Identificar um quadro
+2. Selecionar listas de origem e destino
+3. Criar uma nova tarefa
+4. Consultar cards existentes
+5. Aplicar uma regra de automação
+6. Movimentar cards correspondentes
 
-📁 Nome do quadro para automação: Projeto Pessoal
+Exemplo conceitual :
 
-✅ Quadro selecionado: Projeto Pessoal
+```text
+Quadro: Projeto Pessoal
 
-Listas disponíveis :
-  1. To Do
-  2. Doing
-  3. Done
-
-📝 Nome da lista para criar cards: To Do
-✅ Nome da lista para mover cards concluídos: Done
-
-📝 Criando card: Tarefa do dia - 2024-01-15
-✅ Card criado com sucesso!
-
-🔄 Verificando cards antigos...
-✅ Card 'Reunião antiga' movido para 'Done'
-
-✅ Automação concluída!
-   - Card criado: Tarefa do dia - 2024-01-15
-   - Cards movidos: 1
+To Do
+  ↓
+Nova tarefa criada
+  ↓
+Verificação dos cards
+  ↓
+Regra atendida?
+  ↓
+Sim
+  ↓
+Mover card
+  ↓
+Done
+```
 
 ---
 
 ## 🎯 Exemplos de Automação Personalizada
 
-- Criar card com checklist automático
+Checklist automático
 
+```python
 card = lista.add_card(name="Revisão Diária")
-card.add_checklist("Tarefas do dia", [
-    "Verificar emails",
-    "Atualizar status do projeto",
-    "Fazer commit do código"
-])
 
-- Mover cards com label específica
+card.add_checklist(
+    "Tarefas do dia",
+    [
+        "Verificar emails",
+        "Atualizar status do projeto",
+        "Fazer commit do código"
+    ]
+)
+```
 
+Movimentação por Label
+
+```python
 for card in lista.list_cards():
     for label in card.labels:
         if label.name == "urgente":
             card.change_list(lista_destino.id)
-
-- Agendar execução automática
-
-Windows (Agendador de Tarefas):
 ```
-batch
+
+---
+
+## ⏰ Execução Programada
+
+A aplicação também pode ser executada periodicamente utilizando recursos do
+sistema operacional.
+
+### Windows
+
+Utilize o **Agendador de Tarefas** para executar o script Python no horário desejado.
+
+Exemplo :
+
+```text
 C:\Python39\python.exe C:\projetos\agente_automatico.py
 ```
-Linux/Mac (Cron):
-```
-bash
-# Executar todo dia às 9h
-0 9 * * * /usr/bin/python3 /home/usuario/agente_automatico.py             
+
+### Linux / macOS
+
+Utilize `cron`.
+
+Exemplo para execução diária às 9h:
+
+```bash
+0 9 * * * /usr/bin/python3 /home/usuario/agente_automatico.py
 ```
 
 ---
 
 ## 🛠️ Estrutura do Projeto
+
+```text
+Quadro-Agente-DIO-Marcus-Guedes/
+│
+├── agente.py
+├── automacao_total.py
+├── .gitignore
+└── README.md
 ```
-agente-trello/
-├── .env                # Credenciais da API (não compartilhar)
-├── .gitignore          # Arquivos ignorados pelo Git
-├── agente.py           # Código principal do agente
-├── automacao_total.py  # Versão sem interação (opcional)
-└── README.md           # Documentação
-```
+
+O arquivo `.env` deve existir apenas no ambiente local e **não deve ser
+versionado no repositório**.
 
 ---
 
 ## 🔒 Segurança
 
-- As credenciais são armazenadas no arquivo .env (não versionado)
-- Nunca compartilhe sua API Key ou Token
-- Revogue tokens não utilizados nas configurações do Trello
-- Use .gitignore para evitar commits acidentais
+O projeto utiliza variáveis de ambiente para separar credenciais do código.
+
+Boas práticas :
+
+- Nunca publique `.env`
+- Nunca faça commit de API Keys
+- Nunca publique Tokens
+- Utilize `.gitignore`
+- Revogue credenciais comprometidas
+- Gere novas credenciais quando necessário
 
 ---
 
-## 🤝 Contribuindo
+## 💡 Competências Demonstradas
 
-- Faça um Fork do projeto
-- Crie sua branch (git checkout -b feature/nova-funcionalidade)
-- Commit suas mudanças (git commit -m 'Adiciona nova funcionalidade')
-- Push para a branch (git push origin feature/nova-funcionalidade)
-- Abra um Pull Request
+- Python
+- API Integration
+- Workflow Automation
+- Trello
+- Gerenciamento de tarefas
+- Manipulação de objetos
+- Automação de processos
+- Variáveis de ambiente
+- Gerenciamento de credenciais
+- Git e GitHub
 
 ---
 
-## 👤 Autor
+## 🚀 Possíveis Evoluções
 
-Marcus Guedes
+O projeto pode evoluir incorporando :
 
-- LinkedIn : https://www.linkedin.com/in/marcusguedes
-- GitHub : https://github.com/MCLG1661
+- Interface web
+- FastAPI
+- Webhooks
+- Logs estruturados
+- Tratamento avançado de erros
+- Testes automatizados
+- Docker
+- Banco de dados
+- Dashboard de automações
+- Regras configuráveis
+- Integração com outros serviços
+- Notificações
+- Inteligência Artificial
+
+### 🤖 Evolução para um Agente de IA
+
+Uma evolução particularmente interessante seria incorporar um LLM para interpretar
+instruções em linguagem natural.
+
+Por exemplo:
+
+```text
+"Crie um card para revisar o relatório amanhã e coloque como prioridade alta."
+                         ↓
+                       LLM
+                         ↓
+              Interpretação da intenção
+                         ↓
+                   Trello Tools
+                         ↓
+                    Trello API
+                         ↓
+                  Card criado
+```
+
+Nesse cenário, o projeto evoluiria de uma **automação programática** para um
+**agente capaz de interpretar objetivos e executar ferramentas**.
+
+---
+
+## 🤝 Como Contribuir
+
+Contribuições são bem-vindas.
+
+1. Faça um Fork do projeto
+2. Crie uma branch:
+
+```bash
+git checkout -b feature/nova-funcionalidade
+```
+
+3. Faça suas alterações
+4. Faça o commit
+5. Envie a branch
+6. Abra um Pull Request
+
+---
+
+## 🎓 Contexto
+
+Projeto desenvolvido como parte da jornada de aprendizado na **DIO**, aplicando
+Python à automação de tarefas e integração com serviços externos.
+
+---
+
+## 👨‍💻 Autor
+
+**Marcus Guedes**
+
+Marketing | Data Science | Inteligência Artificial | Gestão de Projetos
+
+GitHub: MCLG1661  
+
+LinkedIn: Marcus Guedes
+
+---
+
+🤖 **Automatizando workflows e transformando tarefas repetitivas em processos programáveis.**
