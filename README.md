@@ -171,13 +171,13 @@ Pré-requisitos
 1. Clone o repositório
 
 ```bash
-git clone https://github.com/MCLG1661/Quadro-Agente-DIO-Marcus-Guedes.git
+git clone https://github.com/MCLG1661/Trello-Workflow-Automation.git
 ```
 
 Entre no diretório:
 
 ```bash
-cd Quadro-Agente-DIO-Marcus-Guedes
+cd Trello-Workflow-Automation
 ```
 
 2. Instale as dependências
@@ -330,7 +330,7 @@ Exemplo para execução diária às 9h:
 ## 🛠️ Estrutura do Projeto
 
 ```text
-Quadro-Agente-DIO-Marcus-Guedes/
+Trello-Workflow-Automation/
 │
 ├── agente.py
 ├── automacao_total.py
