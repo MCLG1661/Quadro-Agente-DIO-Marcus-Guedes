@@ -1,9 +1,8 @@
 import os
-import time
 from datetime import datetime
+
 from dotenv import load_dotenv
 from trello import TrelloClient
-from trello.exceptions import ResourceUnavailable
 
 # Carrega as credenciais do arquivo .env
 load_dotenv()
